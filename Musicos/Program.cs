@@ -1,11 +1,19 @@
 ﻿class musico
 {
+    private string n;
+
     public string nombre{get; set;}
     public musico(string n,string instrumento)
     { 
         nombre=n;
         instrumento= instrumento;
     }
+
+    public musico(string n)
+    {
+        this.n = n;
+    }
+
     public void saluda(){Console.WriteLine($"hola soy {nombre}");}
 
 
@@ -17,8 +25,7 @@ class bajista:musico
     {
         bajo=b;
     }
-    public override void toca()
-    {Console.WriteLine($"{nombre} tocando si {bajo} ");}
+    public override void toca() => Console.WriteLine($"{nombre} tocando si {bajo} ");
 }
 
 
